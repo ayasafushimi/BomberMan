@@ -1,0 +1,42 @@
+
+    void CreateUnbreakableWall()
+    {
+        Vector3 createPos = new Vector3(-10.0f, 0f, 6.0f);
+        Vector3 createPos2 = new Vector3(-10.0f, 0f, -6.0f);
+        Vector3 createPos3 = new Vector3(-10.0f, 0f, 6.0f);
+        Vector3 createPos4 = new Vector3(10.0f, 0f, 6.0f);
+        Vector3 createPos5 = new Vector3(-8.0f, 0f, 4.0f);
+        Vector3 createPos6 = new Vector3(-8.0f, 0f, 4.0f);
+
+        for (int i = 0; i < 20; i++)
+        {
+            Instantiate(UnBreakableWall, createPos, Quaternion.identity);
+            createPos = new Vector3(createPos.x + 1, createPos.y, createPos.z);
+        }
+        for (int i = 0; i < 20; i++)
+        {
+            Instantiate(UnBreakableWall, createPos2, Quaternion.identity);
+            createPos2 = new Vector3(createPos2.x + 1, createPos2.y, createPos2.z);
+        }
+        for (int i = 0; i < 12; i++)
+        {
+            Instantiate(UnBreakableWall, createPos3, Quaternion.identity);
+            createPos3 = new Vector3(createPos3.x, createPos3.y, createPos3.z - 1);
+        }
+        for (int i = 0; i < 13; i++)
+        {
+            Instantiate(UnBreakableWall, createPos4, Quaternion.identity);
+            createPos4 = new Vector3(createPos4.x, createPos4.y, createPos4.z - 1);
+        }
+        for (int j = 0; j < 5; j++)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                Instantiate(UnBreakableWall, createPos5, Quaternion.identity);
+                createPos5 = new Vector3(createPos5.x+2, createPos5.y, createPos5.z);
+            }
+            createPos5 = new Vector3(-8, 0, createPos5.z-2);
+        }
+       
+
+    }
